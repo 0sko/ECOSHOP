@@ -9,3 +9,9 @@ __pycache__/
 # virtualenv
 venv/
 ENV/
+
+docker-compose.yml
+docker
+.ENV
+jenkins_data
+jenkins
