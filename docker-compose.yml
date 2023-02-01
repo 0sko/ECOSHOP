@@ -5,22 +5,13 @@ volumes:
   grafana_data: {}
   
 services:
+
     web:
         build: .
         ports:
             - "5000:5000"
         volumes:
             - .:/ecoshop
-
-    jenkins:
-      image: jenkins/jenkins:lts
-      privileged: true
-      user: root
-      ports:
-       - 8080:8080
-      container_name: jenkins
-      volumes:
-        - ./jenkins_data:/var/jenkins_home
 
     alertmanager:
       container_name: alertmanager
